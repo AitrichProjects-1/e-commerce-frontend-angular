@@ -1,0 +1,18 @@
+.card-img-top{
+    width: 200px;
+    height: 200px;
+}
+.btn{
+    background-color: #31508c;
+    color:white;
+}
+.wishimg{
+    height: 40px;
+    width: 40px;
+    margin-left: 30%;}
+.feature{
+    font-size:40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+}    
