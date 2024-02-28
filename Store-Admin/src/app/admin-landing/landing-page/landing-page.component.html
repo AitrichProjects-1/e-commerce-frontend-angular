@@ -1,11 +1,13 @@
 <div class="container-fluid g-0">
+    <app-navbar></app-navbar>
     <div class="row">
-        <div class="col">
-            <app-navbar></app-navbar>
+        <div class="col-4">
             <app-sidebar></app-sidebar>
-            <app-footer></app-footer>
-            
+        </div>
+        <div class="col-8 d-flex flex-column justify-content-center align-items-center">
+            <!-- <app-dashboard></app-dashboard> -->
+            <router-outlet></router-outlet>
         </div>
     </div>
-    
+    <app-footer></app-footer>
 </div>

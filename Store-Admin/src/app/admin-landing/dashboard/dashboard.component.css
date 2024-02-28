@@ -1,0 +1,14 @@
+.detailed {
+    border-radius: 30px;
+    height: 30vh;
+}
+
+.ovr {
+    border-radius: 30px;
+    height: 20vh;
+
+}
+
+a {
+    text-decoration: none;
+}

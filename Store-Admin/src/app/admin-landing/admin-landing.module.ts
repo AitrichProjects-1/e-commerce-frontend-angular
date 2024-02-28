@@ -5,6 +5,7 @@ import { AdminLandingRoutingModule } from './admin-landing-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AdminProductModule } from '../admin-product/admin-product.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   imports: [
     CommonModule,
     AdminLandingRoutingModule,
-    SharedModule
+    SharedModule,
+    // AdminProductModule
   ]
 })
 export class AdminLandingModule { }
