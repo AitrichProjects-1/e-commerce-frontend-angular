@@ -1,0 +1,25 @@
+
+    .btn{
+        background-color: #31508c;
+        color:white;
+        margin-left: 10px;
+    }
+.wishimg{
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+}
+.number{
+    width:100px;
+    height:80px;
+}
+.buybtn{
+    margin-left: 20px;
+    background-color: #31508c;
+    color:white;
+}
+.count{
+    width: 80px;
+    height: 30px;
+    /* margin: 20px; */
+}

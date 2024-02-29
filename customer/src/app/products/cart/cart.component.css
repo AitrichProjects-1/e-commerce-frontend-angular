@@ -1,0 +1,58 @@
+.cs_cart_table{
+    border: 2px solid rgb(133, 130, 130);
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+width:100%}
+.cartimg{height: 50px;
+width: 50px;}
+
+.pname{
+    font-size: 18px;
+    color: rgb(10, 0, 0);
+}
+.dltimg{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.cs_shop-card {
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 23px 35px 30px;
+  
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .cs_height_30 {
+    height: 30px !important;
+  }
+  .cs_fs_21 {
+    font-size: 21px;
+    line-height: 1.667em;
+  }
+  .cs_medium {
+    font-weight: 500;
+  }
+  .cs_height_30 {
+    height: 30px !important;
+  }
+ .btncheck{
+    background-color: #31508c;
+    color: white;
+    text-decoration:none;
+    height: 50px;
+    width: 100px;
+    margin-left: 50px;
+    border-radius:10px ;
+ }
+.textt{
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+
+
+
+ 
