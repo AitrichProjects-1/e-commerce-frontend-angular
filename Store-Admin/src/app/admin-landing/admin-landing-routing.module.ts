@@ -8,21 +8,9 @@ const routes: Routes = [
     path: '',
     component: LandingPageComponent,
     children: [
-      {
-        path: 'admin-product',
-        loadChildren: () =>
-          import('../admin-product/admin-product.module').then(
-            (m) => m.AdminProductModule
-          ),
-      },
       { path: '', component: DashboardComponent },
-      {
-        path: 'store-admin',
-        loadChildren: () =>
-          import('../store-admin/store-admin.module').then(
-            (m) => m.StoreAdminModule
-          ),
-      },
+      { path: '', loadChildren: () => import('../admin-product/admin-product.module').then((m) => m.AdminProductModule)},
+      { path: '', loadChildren: () => import('../store-admin/store-admin.module').then((m) => m.StoreAdminModule)},
     ],
   },
 ];
@@ -32,3 +20,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AdminLandingRoutingModule { }
+ 

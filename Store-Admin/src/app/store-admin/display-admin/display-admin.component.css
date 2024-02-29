@@ -1,10 +1,16 @@
-button {
+button ,.button {
     background-color: #31508C;
+   
 }
-button:hover{
+.button:hover{
     background-color: #31508C;
     cursor: pointer;
 }
 .active{
     background-color: yellow;
+}
+.add:hover{
+    color: #fff;
+    background-color: #31508C;
+
 }

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AdminLandingModule } from './admin-landing/admin-landing.module';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AdminProductModule } from './admin-product/admin-product.module';
 
 @NgModule({
   declarations: [AppComponent,NotfoundComponent],
