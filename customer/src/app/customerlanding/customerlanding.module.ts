@@ -7,13 +7,15 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { BanerComponent } from './components/baner/baner.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ProductsModule } from '../products/products.module';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
   declarations: [
     HomepageComponent,
     BanerComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

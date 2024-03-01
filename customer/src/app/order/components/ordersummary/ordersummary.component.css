@@ -1,0 +1,18 @@
+.head{
+    text-align: center;
+    font-size: 28px;
+    color: black;
+}
+.orderp{
+    font-size: 18px;
+}
+.orderc{
+    font-size:22px;
+    font: weight 500px; 
+    color: black;
+}
+.btn {
+    background-color: #31508C;
+    color: aliceblue;
+    margin-left: 130px;
+}

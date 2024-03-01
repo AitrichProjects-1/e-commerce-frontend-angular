@@ -8,10 +8,7 @@ const routes: Routes = [
     {
       path: '',loadChildren:()=>import('./customerlanding/customerlanding.module').then(m=>m.CustomerlandingModule)
     },
-      
- 
-
-  
+        
 ];
 
 @NgModule({

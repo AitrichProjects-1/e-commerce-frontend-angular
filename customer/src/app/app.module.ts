@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { CustomerlandingModule } from './customerlanding/customerlanding.module';
 import { SharedModule } from "./shared/shared.module";
+import { OrderModule } from './order/order.module';
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import { SharedModule } from "./shared/shared.module";
         BrowserModule,
         AppRoutingModule,
         CustomerlandingModule,
-        SharedModule
+        SharedModule,
+        OrderModule,
     ]
 })
 export class AppModule { }
