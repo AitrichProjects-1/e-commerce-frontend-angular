@@ -1,0 +1,7 @@
+.top{
+    background-color: #31508c;
+    height: 30px;
+}
+::placeholder{
+    color: #31508C;
+}

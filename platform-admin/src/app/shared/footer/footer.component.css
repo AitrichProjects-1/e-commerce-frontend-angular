@@ -1,0 +1,14 @@
+.page-footer{
+    background-color: black;
+}
+.point{
+    color:white;
+}
+.footerbox{
+    background-color:  #31508c;
+    height: 30px;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
