@@ -8,3 +8,7 @@ button:hover{
 .cat{
     border-radius: 25px;
 }
+.catimg{
+    width: 70px;
+    height: 70px;
+}

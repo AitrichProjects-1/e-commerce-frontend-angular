@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AdminLandingModule } from './admin-landing/admin-landing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { AdminLandingModule } from './admin-landing/admin-landing.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AdminLandingModule
+    AdminLandingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
