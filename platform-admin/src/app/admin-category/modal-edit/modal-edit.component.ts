@@ -46,7 +46,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { CategoryService } from '../service/category.service';
 import { category } from '../models/category';
-import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-modal-edit',
@@ -93,23 +93,9 @@ export class ModalEditComponent implements OnInit {
 
 
 
-  onSubmit() {
-    if (this.editForm.valid) {
-      const formData = this.editForm.value;
-      this.categoryService.editCategory({ ...this.category, ...formData }).subscribe(response => {
-        // Handle success response
-        console.log(response);
-        alert('Category updated successfully');
-        // Close the modal after updating the category
-        this.closeModal();
-      }, error => {
-        // Handle error response
-        console.error('Error updating category:', error);
-        alert('Failed to update category');
-      });
-    }
+ 
   }
-}
+
 
 
   

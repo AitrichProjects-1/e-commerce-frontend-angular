@@ -5,6 +5,7 @@ import { CategoryService } from '../service/category.service';
 import { category } from '../models/category';
 import { ModalEditComponent } from '../modal-edit/modal-edit.component';
 
+
 @Component({
   selector: 'app-display-category',
   templateUrl: './display-category.component.html',
@@ -13,7 +14,14 @@ import { ModalEditComponent } from '../modal-edit/modal-edit.component';
 export class DisplayCategoryComponent implements OnInit {
   categories: category[] = []; // Use the category model
 editcategory: any;
+// @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
+// @ViewChild(MatSort)sort!:MatSort;
+//   dataSource: any;
 
+// ngAfterViewInit(){
+//   this.dataSource.paginator=this.paginator;
+//   this.dataSource.sort=this.sort;
+// }
 
   constructor(private categoryService: CategoryService) { }
 

@@ -21,20 +21,23 @@ getCategories(): Observable<category[]> {
   return this.http.get<category[]>(`${this.apiUrl}/api/v1/productCategory`);
 }
 
+getCategoryById(id: string) {
+  return this.http.get(`${this.apiUrl}/api/v1/productCategory/${id}`);
+}
+
+
+
 deleteCategory(id: string){
   return this.http.delete<category[]>(`${this.apiUrl}/api/v1/productCategory/${id}`);
 }
 
-// editCategory(category: category): Observable<any>
-//  {
-//   return this.http.put<category>(`${this.apiUrl}/api/v1/productCategory/${id}`, data);
-// }
-editCategory(category: category): Observable<any> {
-  // Assuming 'id' is a property within the 'category' object
-  const { id } = category; // Destructure id from the category object
 
-  return this.http.put<category>(`${this.apiUrl}/api/v1/productCategory/${id}`, category); // Use the entire category object
+
+
+editCategory(categoryId: string, updatedCategory: category): Observable<any> {
+  return this.http.put<category>(`${this.apiUrl}/api/v1/productCategory/${categoryId}`, updatedCategory);
 }
+
 
 
 }
