@@ -38,29 +38,5 @@ export class AddCategoryComponent implements OnInit {
     }
   }
 
-  // categoryForm!: FormGroup;
-  //   category: any;
 
-  //   constructor(private categoryService: CategoryService, private fb: FormBuilder) {}
-
-  //   ngOnInit() {
-  //     this.categoryForm = this.fb.group({
-  //       'name': ['', Validators.required],
-  //       'description': ['', Validators.required]
-  //     });
-  //   }
-
-  //   onSubmit() {
-  //     if (this.categoryForm.valid) {
-  //       const formData = this.categoryForm.value;
-  //       this.categoryService.addCategory(formData).subscribe(
-  //         (response) => {
-  //           this.category = response;
-  //           console.log(response);
-
-  //           alert("Category added successfully");
-  //         }
-  //       );
-  //     }
-  //   }
 }

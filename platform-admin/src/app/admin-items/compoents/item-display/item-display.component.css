@@ -1,0 +1,14 @@
+button {
+    background-color: #31508C;
+}
+button:hover{
+    background-color: #31508C;
+    cursor: pointer;
+}
+.cat{
+    border-radius: 25px;
+}
+.catimg{
+    width: 70px;
+    height: 70px;
+}

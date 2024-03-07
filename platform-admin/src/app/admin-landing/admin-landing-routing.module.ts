@@ -23,6 +23,13 @@ const routes: Routes = [
             (m) => m.AdminCategoryModule
           ),
       },
+      {
+        path: '',
+        loadChildren: () =>
+          import('../admin-items/admin-items.module').then(
+            (m) => m.AdminItemsModule
+          ),
+      },
     ],
   },
 ];
