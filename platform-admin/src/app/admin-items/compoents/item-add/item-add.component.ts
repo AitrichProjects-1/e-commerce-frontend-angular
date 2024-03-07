@@ -31,7 +31,7 @@ export class ItemAddComponent {
   ngOnInit() {
     this.itemForm = this.fb.group({
       name: ['', Validators.required],
-      category: ['', Validators.required],
+      categoryId: ['', Validators.required],
       description: ['', Validators.required],
     });
 
@@ -43,6 +43,7 @@ export class ItemAddComponent {
     this.itemService.getCategories().subscribe(
       (categories: category[]) => {
         this.categories = categories;
+        console.log(this.categories)
       },
       (error) => {
         console.error('Error fetching categories:', error);

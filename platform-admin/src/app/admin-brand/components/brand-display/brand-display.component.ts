@@ -49,6 +49,7 @@ export class BrandDisplayComponent implements OnInit {
 
 
 
+
   getBrands() {
     this.brandService.getBrands().subscribe(
       (data) => {
@@ -60,15 +61,19 @@ export class BrandDisplayComponent implements OnInit {
     );
   }
 
-  toggleVerified(event: any, brand: Brand) {
-    brand.checked = event.target.checked;
+ 
+
+
+  toggleVerified(brand: Brand) {
+    brand.checked = !brand.checked; // Toggle the checked property
   }
 
   setVerified(brand: Brand) {
-   
+    brand.checked = true; // Change brand to verified
   }
 
-
-
+  unsetVerified(brand: Brand) {
+    brand.checked = false; // Change brand to unverified
+  }
 }
 

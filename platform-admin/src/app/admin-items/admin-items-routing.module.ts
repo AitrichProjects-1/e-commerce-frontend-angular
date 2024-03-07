@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ItemDisplayComponent } from './compoents/item-display/item-display.component';
 import { ItemAddComponent } from './compoents/item-add/item-add.component';
 import { ItemEditComponent } from './compoents/item-edit/item-edit.component';
+import { AdminCategoryModule } from '../admin-category/admin-category.module';
 
 const routes: Routes = [
   {path: 'view', component: ItemDisplayComponent},

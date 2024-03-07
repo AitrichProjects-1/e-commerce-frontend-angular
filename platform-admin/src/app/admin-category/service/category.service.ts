@@ -13,29 +13,29 @@ export class CategoryService {
 
 
   addCategory(data: any) {
-  return this.http.post(`${this.apiUrl}/api/v1/productCategory`, data);
+  return this.http.post(`${this.apiUrl}/api/v1/product-category`, data);
   // return this.http.post<category>(`${this.apiUrl}/api/v1/productCategory`, data);
 }
 
 getCategories(): Observable<category[]> {
-  return this.http.get<category[]>(`${this.apiUrl}/api/v1/productCategory`);
+  return this.http.get<category[]>(`${this.apiUrl}/api/v1/product-category`);
 }
 
 getCategoryById(id: string) {
-  return this.http.get(`${this.apiUrl}/api/v1/productCategory/${id}`);
+  return this.http.get(`${this.apiUrl}/api/v1/product-category/${id}`);
 }
 
 
 
 deleteCategory(id: string){
-  return this.http.delete<category[]>(`${this.apiUrl}/api/v1/productCategory/${id}`);
+  return this.http.delete<category[]>(`${this.apiUrl}/api/v1/product-category/${id}`);
 }
 
 
 
 
 editCategory(categoryId: string, updatedCategory: category): Observable<any> {
-  return this.http.put<category>(`${this.apiUrl}/api/v1/productCategory/${categoryId}`, updatedCategory);
+  return this.http.put<category>(`${this.apiUrl}/api/v1/product-category/${categoryId}`, updatedCategory);
 }
 
 

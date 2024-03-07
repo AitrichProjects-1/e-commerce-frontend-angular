@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <h3 class="brand">Brands</h3>
 <div class="container border 2px solid black" style="width:900px; height: 300px; overflow-y: auto;">
-    <table class="table table-bordered table-hover" style="width: 100%;">
+    <table class="table table-bordered table-hover  table-striped" style="width: 100%;">
         <thead>
             <tr>
                 <th scope="col">Index</th>
@@ -14,11 +14,12 @@
                 <td>{{ i + 1 }}</td>
                 <td>{{ brand.name }}</td>
               
+                
                 <td>
-                    <input type="checkbox" (change)="toggleVerified($event, brand)">
-                    <button class="btn btn-success m-1" *ngIf="brand.checked" (click)="setVerified(brand)">Verified</button>
+                    <button class="btn btn-danger m-1" *ngIf="!brand.checked" (click)="toggleVerified(brand)">Verify</button>
+                    <button class="btn btn-success m-1" *ngIf="brand.checked" (click)="unsetVerified(brand)">Verified</button>
                 </td>
-
+                 
               
 
             </tr>

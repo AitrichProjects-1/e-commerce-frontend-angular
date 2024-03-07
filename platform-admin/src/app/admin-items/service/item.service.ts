@@ -14,28 +14,28 @@ export class ItemService {
 
 
   addItem(data: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/api/v1/categoryItem`, data);
+    return this.http.post(`${this.apiUrl}/api/v1/category-item`, data);
   }
 
   getCategories(): Observable<category[]> {
-    return this.http.get<category[]>(`${this.apiUrl}/api/v1/productCategory`);
+    return this.http.get<category[]>(`${this.apiUrl}/api/v1/product-category`);
   }
   
   getItem(): Observable<Item[]> {
-    return this.http.get<Item[]>(`${this.apiUrl}/api/v1/categoryItem`);
+    return this.http.get<Item[]>(`${this.apiUrl}/api/v1/category-item`);
   }
 
   getitemById(id: string) {
-    return this.http.get(`${this.apiUrl}/api/v1/categoryItem/${id}`);
+    return this.http.get(`${this.apiUrl}/api/v1/category-item/${id}`);
   }
   
   
 deleteItem(id: string){
-  return this.http.delete<Item[]>(`${this.apiUrl}/api/v1/categoryItem/${id}`);
+  return this.http.delete<Item[]>(`${this.apiUrl}/api/v1/category-item/${id}`);
 }
 
 editItem(itemId: string, updateditem: Item): Observable<any> {
-  return this.http.put<Item>(`${this.apiUrl}/api/v1/categoryItem/${itemId}`, updateditem);
+  return this.http.put<Item>(`${this.apiUrl}/api/v1/category-item/${itemId}`, updateditem);
 }
 
   

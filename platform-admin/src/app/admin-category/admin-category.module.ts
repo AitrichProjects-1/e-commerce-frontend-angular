@@ -14,6 +14,7 @@ import { EditcategoryComponent } from './editcategory/editcategory.component';
 @NgModule({
   declarations: [AddCategoryComponent, DisplayCategoryComponent, ModalEditComponent, SearchcategoryComponent, EditcategoryComponent],
   imports: [CommonModule, AdminCategoryRoutingModule,ReactiveFormsModule],
+  exports:[AddCategoryComponent,DisplayCategoryComponent,EditcategoryComponent]
   
 })
 export class AdminCategoryModule {}

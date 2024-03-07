@@ -13,9 +13,11 @@
 
         <div class="row">
             <div class="col-auto">
-                <label for="name" class="form-label">Category</label>
-                <input type="text" class="form-control shadow border border-dark" id="name"
-                    aria-describedby="emailHelp" formControlName="category" />
+                <label for="category" class="form-label">Category</label>
+                <select id="category" class="form-control shadow border border-dark" formControlName="categoryId">
+                    <option value="">Select a category</option>
+                    <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+                </select>
             </div>
         </div>
 

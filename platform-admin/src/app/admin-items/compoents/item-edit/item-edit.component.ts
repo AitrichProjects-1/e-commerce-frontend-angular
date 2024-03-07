@@ -11,48 +11,106 @@ import { category } from 'src/app/admin-category/models/category';
   styleUrls: ['./item-edit.component.css']
 })
 export class ItemEditComponent {
-  editForm: any;
- itemId: string | null | undefined;
+//   editForm: any;
+//  itemId: string | null | undefined;
+
+//   constructor(
+//     private ItemService: ItemService,
+//     private fb: FormBuilder,
+//     private route: ActivatedRoute,
+//     private router: Router
+//   ) {}
+
+//   ngOnInit():void {
+//     this.itemId = this.route.snapshot.paramMap.get('id');
+//     this.editForm = this.fb.group({
+//       name:[''],
+//       category:[''],
+//       description:[''],
+//     });
+//     this.getitem();
+//   }
+  
+//   getitem(): void {
+//     if (this.itemId) {
+//       this.ItemService
+//       .getitemById(this.itemId)
+//       .subscribe((item: any) => {
+//         this.editForm.patchValue(item);
+//       });
+//     }
+//   }
+
+//   onSubmit():void {
+//     if (this.editForm.valid && this.itemId) {
+//       const updateditem = this.editForm.value;
+//       this.ItemService
+//         .editItem(this.itemId, updateditem )
+//         .subscribe(() => {
+//           alert('item updated successfully');
+//           // Navigate back to the category list page
+//           this.router.navigate(['/view']);
+//         });
+//     } else {
+//       console.log('error occured');
+//     }
+//   }
+
+editForm: any;
+  itemId: string | null | undefined;
+  categories: category[] = []; // Initialize categories array
 
   constructor(
-    private ItemService: ItemService,
+    private itemService: ItemService,
     private fb: FormBuilder,
     private route: ActivatedRoute,
     private router: Router
   ) {}
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.itemId = this.route.snapshot.paramMap.get('id');
     this.editForm = this.fb.group({
-      name:[''],
-      category:[''],
-      description:[''],
+      name: [''],
+      categoryId: [''], // Change to categoryId
+      description: [''],
     });
-    this.getitem();
+    this.getItem();
+    this.fetchCategories(); // Fetch categories when component initializes
   }
   
-  getitem(): void {
+  getItem(): void {
     if (this.itemId) {
-      this.ItemService
-      .getitemById(this.itemId)
+      this.itemService
+      .getitemById(this.itemId) // Update to getItemById
       .subscribe((item: any) => {
         this.editForm.patchValue(item);
       });
     }
   }
 
-  onSubmit():void {
+  fetchCategories(): void {
+    this.itemService.getCategories().subscribe(
+      (categories: category[]) => {
+        this.categories = categories;
+      },
+      (error) => {
+        console.error('Error fetching categories:', error);
+      }
+    );
+  }
+
+  onSubmit(): void {
     if (this.editForm.valid && this.itemId) {
-      const updateditem = this.editForm.value;
-      this.ItemService
-        .editItem(this.itemId, updateditem )
+      const updatedItem = this.editForm.value;
+      this.itemService
+        .editItem(this.itemId, updatedItem)
         .subscribe(() => {
-          alert('item updated successfully');
-          // Navigate back to the category list page
+          alert('Item updated successfully');
+          // Navigate back to the item list page
           this.router.navigate(['/view']);
         });
     } else {
-      console.log('error occured');
+      console.log('Error occurred');
     }
   }
 
