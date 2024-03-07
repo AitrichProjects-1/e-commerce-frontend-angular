@@ -1,3 +1,4 @@
+import { AdminBrandModule } from './../admin-brand/admin-brand.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
@@ -28,6 +29,15 @@ const routes: Routes = [
         loadChildren: () =>
           import('../admin-items/admin-items.module').then(
             (m) => m.AdminItemsModule
+          ),
+      },
+
+      {
+        path: '',
+        loadChildren: () =>
+          import('../admin-brand/admin-brand.module').then(
+            (m) => m.AdminBrandModule
+            
           ),
       },
     ],

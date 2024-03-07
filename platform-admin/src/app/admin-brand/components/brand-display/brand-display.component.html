@@ -1,1 +1,31 @@
-<p>brand-display works!</p>
+<div class="container-fluid">
+<h3 class="brand">Brands</h3>
+<div class="container border 2px solid black" style="width:900px; height: 300px; overflow-y: auto;">
+    <table class="table table-bordered table-hover" style="width: 100%;">
+        <thead>
+            <tr>
+                <th scope="col">Index</th>
+                <th scope="col">Brand Name</th>
+                <th scope="col">Verified</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let brand of brands; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ brand.name }}</td>
+              
+                <td>
+                    <input type="checkbox" (change)="toggleVerified($event, brand)">
+                    <button class="btn btn-success m-1" *ngIf="brand.checked" (click)="setVerified(brand)">Verified</button>
+                </td>
+
+              
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+
