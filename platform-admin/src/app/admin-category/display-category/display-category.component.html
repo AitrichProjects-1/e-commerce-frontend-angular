@@ -1,114 +1,23 @@
-<!-- <div class="container">
-    <div class="row">
-        <div class="row gap-3 text-center">
-        <div class="col border border-primary rounded w-50">
-            <img src="../../../assets/images/Laptop.svg" alt="" srcset="">
-          
-            <span class="fa fa-edit"></span>
-        </div> -->
-        <!-- <div class="col border border-primary rounded w-50">
-             <img src="../../../assets/images/Smartphone.svg" alt="" srcset="">
-             <p>Mobile & Tablet</p>
-            <span class="fa fa-edit"></span>
-        </div>
-        <div class="col border border-primary rounded w-50">
-             <img src="../../../assets/images/Camera.svg" alt="" srcset="">
-           <p>Camera</p>
-            <span class="fa fa-edit"></span>
-
-        </div>
-        </div>
-        <div class="row mt-3 gap-3 text-center">
-            <div class="col border border-primary rounded w-50">
-                <img src="../../../assets/images/Air Conditioner.svg" alt="" srcset="">
-                <p>Home Appliance</p>
-            <span class="fa fa-edit"></span>
-
-
-            </div>
-            <div class="col border border-primary rounded w-50">
-                <img src="../../../assets/images/Smart Watch.svg" alt="" srcset="">
-                <p>Smart Watch</p>
-            <span class="fa fa-edit"></span>
-
-            </div>
-            <div class="col border border-primary rounded w-50">
-                <img src="../../../assets/images/Recording.svg" alt="" srcset="">
-              <p>  Microphone & Audio</p>
-            <span class="fa fa-edit"></span>
-
-            </div>
-        </div> -->
-        <!-- <div class="row mt-3">
-            <div class="col d-flex align-items-center justify-content-center">
-                <button class="btn text-white w-25" routerLink="add-category">Add</button>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-<!-- <div class="container">
-    <div class="row">
-      <ng-container *ngFor="let categorySet of categoriesChunked">
-        <div class="row gap-3 text-center">
-          <div *ngFor="let category of categorySet" class="col border border-primary rounded w-10 mt-4">
-            <img src="../../../assets/images/home-category.png" class="catimg"> 
-            <h5>{{ category.name }}</h5>
-           
-            <span class="fa fa-edit" style="font-size:24px; color: #1fe450;"></span>
-            <span>&nbsp;</span>
-            
-            <span class="fa fa-trash-o" style="font-size:24px;color: #dc0b0b;margin-left:50px; cursor: pointer;" (click)="deleteCategory(category.id)"></span>
-        </div>
-        </div>
-      </ng-container>
-    </div>
-    <div class="row mt-3">
-      <div class="col d-flex align-items-center justify-content-center">
-        <button class="btn text-white w-25" routerLink="add-category">Add</button>
-      </div>
-    </div>
-  </div>
-   -->
-
-   <!-- <div class="container">
-    <div class="row">
-      <ng-container *ngFor="let categorySet of categoriesChunked">
-        <div class="row gap-3 text-center">
-          <div *ngFor="let category of categorySet" class="col border border-primary rounded w-10 mt-4">
-            <img src="../../../assets/images/home-category.png" class="catimg"> 
-            <h5>{{ category.name }}</h5>
-           
-            <span class="fa fa-edit" style="font-size:24px; color: #1fe450;"></span>
-            <span>&nbsp;</span>
-            
-            <span class="fa fa-trash-o" style="font-size:24px;color: #dc0b0b;margin-left:50px; cursor: pointer;" (click)="deleteCategory(category.id)"></span>
-        </div>
-        </div>
-      </ng-container>
-    </div>
-    <div class="row mt-3">
-      <div class="col d-flex align-items-center justify-content-center">
-        <button class="btn text-white w-25" routerLink="add-category">Add</button>
-      </div>
-    </div>
-  </div>
-   -->
+<!-- 
 
     <div class="container">
+    <div class="row">
+      <div class="col-8 display-flex    align-items-center justify-content-center">
+        <app-searchcategory></app-searchcategory></div>
+      <div class="col-4 display-flex    align-items-center justify-content-center">
+         <button class="btn text-white w-70" routerLink="add-category">AddItem</button>
+      </div>
+    </div>
+   
     <div class="row ">
       <ng-container >
-        <div class="col display-flex    align-items-center justify-content-center">
-          <button class="btn text-white w-25" routerLink="add-category">Add</button>
-        </div>
+        
         <div class="row gap-3 text-center">
           <div *ngFor="let category of categories" class="col border border-primary rounded w-10 mt-4 col-4">
             <img src="../../../assets/images/home-category.png" class="catimg"> 
             <h5>{{ category.name }}</h5>
             <span class="fa fa-edit" style="font-size:24px; color: #1fe450;" data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/edit', category.id]"></span>
-             <!-- <button class="btn btn-danger" [routerLink]="['/edit', category.id]">edit</button> -->
+             
             <span>&nbsp;</span>
             
             <span class="fa fa-trash-o" style="font-size:24px;color: #dc0b0b;margin-left:50px; cursor: pointer;" (click)="deleteCategory(category.id)"></span>
@@ -123,13 +32,35 @@
 
 
   </div>
+   -->
   
-  <div class="container">
-    <div class="bg-light" style="margin-top: -16px;height: 2rem;">
-        <button style="border:1px  solid grey;color:grey; margin-left:10px;float: left;border-radius: 10px;"
-            ><small>
-                << prevoius </small></button>
-        <small style="color:grey;margin-left: 450px;">page/10</small>
-        <button style="border:1px  solid grey;color:grey; margin-right:10px;float:right;border-radius: 10px;"
-            ><small> next >> </small></button>
-    </div>
+
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 d-flex align-items-center justify-content-center">
+          <app-searchcategory></app-searchcategory>
+      </div>
+      <div class="col-md-4 d-flex align-items-center justify-content-center">
+          <button class="btn btn-primary w-100" routerLink="add-category">Add Item</button>
+      </div>
+  </div>
+
+  <div class="row mt-4">
+      <div *ngFor="let category of categories" class="col-lg-4 col-md-6 mt-4">
+          <div class="card border border-primary rounded">
+              <div class="d-flex justify-content-center">
+                  <img src="../../../assets/images/home-category.png" class="card-img-top catimg" alt="Category Image">
+              </div>
+              <div class="card-body text-center">
+                  <h5 class="card-title">{{ category.name }}</h5>
+                  <div class="d-flex justify-content-center">
+                      <span class="fa fa-edit" style="font-size:24px; color: #1fe450; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/edit', category.id]"></span>
+                      <span class="fa fa-trash-o ml-3" style="font-size:24px; color: #dc0b0b; cursor: pointer;" (click)="deleteCategory(category.id)"></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+

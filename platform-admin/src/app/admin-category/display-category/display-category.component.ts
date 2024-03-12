@@ -3,7 +3,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CategoryService } from '../service/category.service';
 import { category } from '../models/category';
-import { ModalEditComponent } from '../modal-edit/modal-edit.component';
+
 
 
 @Component({
@@ -12,23 +12,58 @@ import { ModalEditComponent } from '../modal-edit/modal-edit.component';
   styleUrls: ['./display-category.component.css']
 })
 export class DisplayCategoryComponent implements OnInit {
-  categories: category[] = []; // Use the category model
-  editcategory: any;
+//   categories: category[] = []; 
+
+//   editcategory: any;
 
 
-  constructor(private categoryService: CategoryService) { }
+//   constructor(private categoryService: CategoryService) { }
+
+//   ngOnInit() {
+//     this.fetchCategories(); 
+//   }
+
+
+
+//   fetchCategories() {
+//     this.categoryService.getCategories().subscribe(
+//       (data) => {
+//         this.categories = data;
+     
+//       },
+//       (error) => {
+//         console.error('Error fetching categories:', error);
+//       }
+//     );
+//   }
+
+// deleteCategory(categoryId: string) {
+//   this.categoryService.deleteCategory(categoryId).subscribe(
+//       () => {
+          
+//           this.categories = this.categories.filter(category => category.id !== categoryId);
+        
+//       },
+//       (error) => {
+//           console.error('Error deleting category:', error);
+//       }
+//   );
+// }
+
+categories: category[] = [];
+  filteredCategories: category[] = [];
+
+  constructor(private categoryService: CategoryService) {}
 
   ngOnInit() {
-    this.fetchCategories(); // Call the function to fetch categories
+    this.fetchCategories();
   }
-
-
 
   fetchCategories() {
     this.categoryService.getCategories().subscribe(
       (data) => {
         this.categories = data;
-     
+        this.filteredCategories = [...this.categories];
       },
       (error) => {
         console.error('Error fetching categories:', error);
@@ -36,18 +71,25 @@ export class DisplayCategoryComponent implements OnInit {
     );
   }
 
-deleteCategory(categoryId: string) {
-  this.categoryService.deleteCategory(categoryId).subscribe(
+  deleteCategory(categoryId: string) {
+    this.categoryService.deleteCategory(categoryId).subscribe(
       () => {
-          
-          this.categories = this.categories.filter(category => category.id !== categoryId);
-        
+        this.categories = this.categories.filter(category => category.id !== categoryId);
       },
       (error) => {
-          console.error('Error deleting category:', error);
+        console.error('Error deleting category:', error);
       }
-  );
-}
+    );
+  }
 
-
+  // handleSearch(searchTerm: string): void {
+  //   this.categoryService.searchcategory(searchTerm).subscribe(
+  //     (data) => {
+  //       this.filteredCategories = data;
+  //     },
+  //     (error) => {
+  //       console.error('Error searching categories:', error);
+  //     }
+  //   );
+  // }
 }

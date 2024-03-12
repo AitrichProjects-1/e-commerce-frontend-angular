@@ -38,6 +38,9 @@ editCategory(categoryId: string, updatedCategory: category): Observable<any> {
   return this.http.put<category>(`${this.apiUrl}/api/v1/product-category/${categoryId}`, updatedCategory);
 }
 
+searchcategory(id: string) {
+  return this.http.get(`${this.apiUrl}/api/v1/product-category/search`);
+}
 
 
 }

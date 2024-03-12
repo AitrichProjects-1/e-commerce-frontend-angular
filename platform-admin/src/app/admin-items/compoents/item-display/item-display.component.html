@@ -39,7 +39,7 @@
     
  -->
 
- <div class="container">
+ <!-- <div class="container">
   <div class="row">
     <ng-container>
       <div class="col display-flex align-items-center justify-content-center">
@@ -51,7 +51,7 @@
           <h5>{{ item.name }}</h5>
           <p>{{ getCategoryName(item.categoryId) }}</p>
           <span class="fa fa-edit" style="font-size:24px; color: #1fe450;" data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/edititem', item.id]"></span>
-          <!-- <button class="btn btn-danger" [routerLink]="['/edit', category.id]">edit</button> -->
+          
           <span>&nbsp;</span>
           <span class="fa fa-trash-o" style="font-size:24px;color: #dc0b0b;margin-left:50px; cursor: pointer;" (click)="deleteItem(item.id)"></span>
         </div>
@@ -59,4 +59,26 @@
     </ng-container>
   </div>
   <div class="row mt-3"></div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center mb-3">
+      <button class="btn btn-primary w-100" routerLink="/add">Add</button>
+    </div>
+  </div>
+  <div class="row gap-3 text-center">
+    <div *ngFor="let item of items" class=" col-md-3 col-sm-3">
+      <div class="border border-primary rounded mt-4">
+        <img src="../../../../assets/images/Vector.png" class="img-fluid">
+        <h5>{{ item.name }}</h5>
+        <p>{{ getCategoryName(item.categoryId) }}</p>
+        <span class="fa fa-edit" style="font-size:24px; color: #1fe450;" data-bs-toggle="modal" data-bs-target="#exampleModal" [routerLink]="['/edititem', item.id]"></span>
+        <span>&nbsp;</span>
+        <span class="fa fa-trash-o" style="font-size:24px;color: #dc0b0b; cursor: pointer;" (click)="deleteItem(item.id)"></span>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3"></div>
 </div>
+
